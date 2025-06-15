@@ -8,6 +8,11 @@ export default defineConfig({
   build: {
     outDir: 'docs',  // Changed from 'dist' to 'docs' for GitHub Pages
     assetsDir: 'assets',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
